@@ -15,8 +15,8 @@ return {
   table = "consumers",
   primary_key = {"id"},
   fields = {
-    id = { type = "id", dao_insert_value = true },
-    created_at = { type = "timestamp", immutable = true, dao_insert_value = true },
+    id = { type = "id", dao_insert_value = true, required = true },
+    created_at = { type = "timestamp", immutable = true, dao_insert_value = true, required = true },
     custom_id = { type = "string", unique = true, func = check_custom_id_and_username },
     username = { type = "string", unique = true, func = check_custom_id_and_username }
   },
